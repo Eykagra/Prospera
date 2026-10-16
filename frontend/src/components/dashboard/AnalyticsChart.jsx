@@ -59,8 +59,8 @@ export default function AnalyticsChart({ applications = [] }) {
           <svg className="analytics-chart-svg" viewBox="0 0 480 150">
             <defs>
               <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#363ff5" />
-                <stop offset="100%" stopColor="#363ff5" stopOpacity="0" />
+                <stop offset="0%" stopColor="var(--primary-accent)" />
+                <stop offset="100%" stopColor="var(--primary-accent)" stopOpacity="0" />
               </linearGradient>
             </defs>
 
@@ -112,7 +112,7 @@ export default function AnalyticsChart({ applications = [] }) {
               <span className="tooltip-label">Applications: <strong>{activePoint.applications}</strong></span>
             </div>
             <div className="tooltip-row">
-              <span className="tooltip-dot" style={{ backgroundColor: '#4f46e5' }}></span>
+              <span className="tooltip-dot" style={{ backgroundColor: 'var(--info)' }}></span>
               <span className="tooltip-label">Interviews: <strong>{activePoint.interviews}</strong></span>
             </div>
           </div>

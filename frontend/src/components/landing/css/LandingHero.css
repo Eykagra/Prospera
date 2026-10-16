@@ -27,10 +27,7 @@
 }
 
 .hero-accent {
-  color: var(--primary-accent);
-  background: linear-gradient(135deg, #363ff5 0%, #6366f1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary);
 }
 
 .hero-description {
@@ -57,14 +54,14 @@
   padding: 16px 32px;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(54, 63, 245, 0.25);
+  box-shadow: 0 4px 18px rgb(var(--accent-rgb) / 0.16);
   transition: var(--transition-smooth);
 }
 
 .btn-hero-primary:hover {
-  background-color: var(--primary);
+  background-color: var(--primary-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(54, 63, 245, 0.35);
+  box-shadow: 0 8px 24px rgb(var(--accent-rgb) / 0.2);
 }
 
 .btn-hero-secondary {
@@ -143,7 +140,7 @@
   width: 520px;
   height: 520px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.05) 60%, rgba(139, 92, 246, 0) 80%);
+  background: radial-gradient(circle, rgb(var(--accent-rgb) / 0.12) 0%, rgb(var(--accent-rgb) / 0.03) 60%, transparent 80%);
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -156,7 +153,7 @@
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(139, 92, 246, 0.28);
+  border: 1.5px dashed var(--accent-border);
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -169,8 +166,8 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background-color: var(--primary-light);
-  border: 1px solid #dcd6ff;
+  background-color: var(--accent-art);
+  border: 1px solid var(--accent-border);
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -197,8 +194,8 @@
   width: 640px;
   height: 640px;
   border-radius: 50%;
-  background-color: #d4ceff;
-  border: 1px solid #c4baff;
+  background-color: var(--accent-art);
+  border: 1px solid var(--accent-border);
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -216,9 +213,9 @@
 .hero-floating-dot.dot-lg {
   width: 24px;
   height: 24px;
-  background-color: #c4baff;
-  border: 1.5px solid #b4a8ff;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+  background-color: var(--accent-art);
+  border: 1.5px solid var(--accent-border);
+  box-shadow: 0 4px 12px rgb(var(--accent-rgb) / 0.12);
   top: 100px;
   right: 110px;
 }
@@ -227,8 +224,8 @@
   width: 14px;
   height: 14px;
   background-color: var(--primary-light);
-  border: 1px solid var(--primary-light);
-  box-shadow: 0 3px 8px rgba(139, 92, 246, 0.12);
+  border: 1px solid var(--accent-border);
+  box-shadow: 0 3px 8px rgb(var(--accent-rgb) / 0.1);
   top: 140px;
   right: 145px;
 }

@@ -2,28 +2,31 @@
 
 :root {
   color-scheme: light;
-  /* Brand — refined indigo, used sparingly */
-  --primary: #4f46e5;
-  --primary-accent: #4f46e5; /* indigo-600 */
-  --primary-accent-hover: #4338ca;
-  --primary-light: #eef2ff; /* soft indigo wash (active nav, chips) */
+  /* Brand: teal actions and cool, ink-tinted neutrals. */
+  --primary: #076e79; /* text on tinted surfaces */
+  --primary-accent: #087f8c;
+  --primary-accent-hover: #076e79;
+  --primary-light: #e3f3f4;
+  --accent-rgb: 8 127 140;
+  --accent-border: #a5ced3;
+  --accent-art: #cce8eb;
   /* Surfaces */
-  --bg-main: #f7f8fa; /* page background */
+  --bg-main: #f5f7f8; /* page background */
   --bg-card: #ffffff; /* cards / panels */
   --bg-elevated: #ffffff; /* modals / popovers / menus */
-  --bg-inset: #f2f4f7; /* inputs, wells, subtle fills */
-  /* Borders — hairline */
-  --border-color: #ecedf1;
-  --border-dark: #e1e4e9;
-  --border-strong: #ccd1d9;
-  /* Text — near-black, refined */
-  --text-main: #14161a;
-  --text-muted: #5b626d;
-  --text-light: #8d94a0;
+  --bg-inset: #edf2f3; /* inputs, wells, subtle fills */
+  /* Borders */
+  --border-color: #e0e8ea;
+  --border-dark: #cedbde;
+  --border-strong: #8da5ac;
+  /* Text */
+  --text-main: #172b30;
+  --text-muted: #50666d;
+  --text-light: #5b6e74;
   --text-inverse: #ffffff; /* text/icons ON a colored/accent fill */
 
   /* Accent States (token `*-strong` = the darker on-light text shade) */
-  --success: #059669;
+  --success: #047857;
   --success-strong: #047857;
   --success-bg: #ecfdf5;
   --warning: #d97706;
@@ -39,19 +42,19 @@
   --purple-bg: #f5f3ff;
 
   /* Misc surfaces */
-  --overlay: rgba(17, 19, 24, 0.45); /* modal backdrops */
-  --chip-bg: #f2f4f7; /* neutral chips/pills */
-  --hover-bg: #f3f4f7; /* row/button hover */
-  --glass-bg: rgba(255, 255, 255, 0.82); /* frosted sticky header */
+  --overlay: rgba(16, 23, 25, 0.45); /* modal backdrops */
+  --chip-bg: #edf2f3; /* neutral chips/pills */
+  --hover-bg: #e8eff1; /* row/button hover */
+  --glass-bg: rgba(245, 247, 248, 0.92); /* frosted sticky header */
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-heading: 'Outfit', var(--font-sans);
 
   /* Shadows — soft, layered */
-  --shadow-sm: 0 1px 2px 0 rgb(17 19 24 / 0.05);
-  --shadow-card: 0 1px 2px rgb(17 19 24 / 0.04), 0 8px 24px -10px rgb(17 19 24 / 0.08);
-  --shadow-lg: 0 16px 40px -14px rgb(17 19 24 / 0.16);
+  --shadow-sm: 0 1px 2px 0 rgb(23 43 48 / 0.05);
+  --shadow-card: 0 1px 2px rgb(23 43 48 / 0.04), 0 8px 24px -10px rgb(23 43 48 / 0.08);
+  --shadow-lg: 0 16px 40px -14px rgb(23 43 48 / 0.16);
   --sidebar-width: 268px;
   --transition-smooth: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -62,23 +65,25 @@
    light: its templates + ResumePaper hardcode #fff/#111827, never these tokens. */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  /* Refined neutral near-black. Accent is a light indigo, so text ON accent fills
-     is near-black (--text-inverse) — premium "light button, dark label" look. */
-  --primary: #a5b4fc;
-  --primary-accent: #818cf8; /* indigo-400 */
-  --primary-accent-hover: #a5b4fc;
-  --primary-light: rgba(129, 140, 248, 0.14); /* subtle indigo wash */
-  --bg-main: #0b0c0e; /* near-black */
-  --bg-card: #151619;
-  --bg-elevated: #1c1e22; /* popovers / modals */
-  --bg-inset: #101113; /* inputs, wells */
-  --border-color: #222428; /* hairline */
-  --border-dark: #2c2f35;
-  --border-strong: #3b3f47;
-  --text-main: #f4f5f7;
-  --text-muted: #9aa0aa;
-  --text-light: #696f78;
-  --text-inverse: #0b0c0e; /* near-black label on a light accent/state fill */
+  /* Light teal actions use a dark label; surfaces retain a cool charcoal tint. */
+  --primary: #8bdde3;
+  --primary-accent: #63ccd5;
+  --primary-accent-hover: #8bdde3;
+  --primary-light: #203a3e;
+  --accent-rgb: 99 204 213;
+  --accent-border: #365c62;
+  --accent-art: #23454b;
+  --bg-main: #101719;
+  --bg-card: #192326;
+  --bg-elevated: #223034; /* popovers / modals */
+  --bg-inset: #131e21; /* inputs, wells */
+  --border-color: #2a3b40;
+  --border-dark: #354b51;
+  --border-strong: #5c7b84;
+  --text-main: #eaf1f2;
+  --text-muted: #acbfc4;
+  --text-light: #94abb2;
+  --text-inverse: #101719; /* dark label on a light accent/state fill */
   --success: #34d399;
   --success-strong: #6ee7b7;
   --success-bg: rgba(52, 211, 153, 0.13);
@@ -94,9 +99,9 @@
   --purple-accent: #a78bfa;
   --purple-bg: rgba(167, 139, 250, 0.15);
   --overlay: rgba(0, 0, 0, 0.66);
-  --chip-bg: #1c1e22;
-  --hover-bg: rgba(255, 255, 255, 0.045);
-  --glass-bg: rgba(11, 12, 14, 0.82);
+  --chip-bg: #223034;
+  --hover-bg: #283a3f;
+  --glass-bg: rgba(16, 23, 25, 0.92);
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
   --shadow-card: 0 1px 3px rgb(0 0 0 / 0.4), 0 12px 32px -12px rgb(0 0 0 / 0.6);
   --shadow-lg: 0 20px 48px -16px rgb(0 0 0 / 0.7);

@@ -1,11 +1,11 @@
 /* ── Auth (login + signup) — full-bleed dual panel ─────────────────────────── */
-/* Left visual stays brand indigo. Right form follows app light/dark theme. */
+/* Teal brand artwork; form colors follow the shared light/dark theme. */
 
 .auth-page {
   /* Form palette — light (default :root tokens) */
   --auth-panel: var(--bg-card);
   --auth-input: var(--bg-inset);
-  --auth-input-hover: #eef0f4;
+  --auth-input-hover: var(--hover-bg);
   --auth-input-border: var(--border-dark);
   --auth-line: var(--border-color);
   --auth-text: var(--text-main);
@@ -14,15 +14,15 @@
   --auth-accent: var(--primary-accent);
   --auth-accent-hover: var(--primary-accent-hover);
   --auth-accent-soft: var(--primary-light);
-  --auth-link: var(--primary-accent);
+  --auth-link: var(--primary);
   --auth-link-hover: var(--primary-accent-hover);
-  --auth-submit-fg: #ffffff;
+  --auth-submit-fg: var(--text-inverse);
   --auth-eye-hover: var(--hover-bg);
   --auth-alert-bg: var(--danger-bg);
   --auth-alert-border: var(--danger-border);
   --auth-alert-text: var(--danger-text);
   --auth-err: var(--danger-text);
-  --auth-panel-glow: radial-gradient(ellipse 80% 60% at 50% 45%, rgba(79, 70, 229, 0.04) 0%, transparent 70%);
+  --auth-panel-glow: radial-gradient(ellipse 80% 60% at 50% 45%, rgb(var(--accent-rgb) / 0.03) 0%, transparent 70%);
 
   min-height: 100vh;
   min-height: 100dvh;
@@ -32,29 +32,6 @@
   font-family: var(--font-sans);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-}
-
-:root[data-theme="dark"] .auth-page {
-  --auth-panel: #17181d;
-  --auth-input: #1e1f26;
-  --auth-input-hover: #24252e;
-  --auth-input-border: rgba(255, 255, 255, 0.06);
-  --auth-line: rgba(255, 255, 255, 0.07);
-  --auth-text: #f3f3f5;
-  --auth-muted: #8b8d98;
-  --auth-faint: #5f616d;
-  --auth-accent: #6d6af0;
-  --auth-accent-hover: #7f7cf5;
-  --auth-accent-soft: rgba(109, 106, 240, 0.14);
-  --auth-link: #a8a6ff;
-  --auth-link-hover: #c4c2ff;
-  --auth-submit-fg: #ffffff;
-  --auth-eye-hover: rgba(255, 255, 255, 0.04);
-  --auth-alert-bg: rgba(239, 68, 68, 0.08);
-  --auth-alert-border: rgba(239, 68, 68, 0.22);
-  --auth-alert-text: #f0a8a8;
-  --auth-err: #e8a0a0;
-  --auth-panel-glow: radial-gradient(ellipse 80% 60% at 50% 45%, rgba(255, 255, 255, 0.015) 0%, transparent 70%);
 }
 
 .auth-shell {
@@ -76,9 +53,9 @@
   color: #fff;
   overflow: hidden;
   background:
-    radial-gradient(120% 90% at 88% 8%, rgba(140, 150, 255, 0.18) 0%, transparent 52%),
-    radial-gradient(90% 70% at 12% 90%, rgba(30, 20, 70, 0.55) 0%, transparent 50%),
-    linear-gradient(168deg, #4a4ac4 0%, #3535a0 36%, #221f58 72%, #14122e 100%);
+    radial-gradient(120% 90% at 88% 8%, rgb(99 204 213 / 0.14) 0%, transparent 52%),
+    radial-gradient(90% 70% at 12% 90%, rgb(16 43 48 / 0.55) 0%, transparent 50%),
+    linear-gradient(168deg, #076e79 0%, #15515b 36%, #19373e 72%, #101e23 100%);
   border-right: 1px solid rgba(255, 255, 255, 0.04);
 }
 .auth-visual-top {
@@ -173,7 +150,7 @@
   right: -18%;
   width: 62%;
   height: 48%;
-  background: radial-gradient(circle, rgba(160, 168, 240, 0.22) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(99 204 213 / 0.12) 0%, transparent 70%);
 }
 .auth-dune {
   position: absolute;
@@ -184,20 +161,20 @@
 .auth-dune-1 {
   bottom: -10%;
   height: 40%;
-  background: linear-gradient(188deg, rgba(70, 68, 140, 0.28) 0%, rgba(18, 16, 42, 0.92) 72%);
+  background: linear-gradient(188deg, rgb(54 108 116 / 0.28) 0%, rgb(16 36 41 / 0.92) 72%);
   transform: rotate(-3.5deg);
 }
 .auth-dune-2 {
   bottom: -20%;
   height: 46%;
-  background: linear-gradient(178deg, rgba(48, 46, 100, 0.42) 0%, rgba(12, 10, 28, 0.96) 78%);
+  background: linear-gradient(178deg, rgb(38 76 84 / 0.42) 0%, rgb(13 28 32 / 0.96) 78%);
   transform: rotate(2.5deg) scaleX(1.08);
   opacity: 0.95;
 }
 .auth-dune-3 {
   bottom: -30%;
   height: 38%;
-  background: linear-gradient(180deg, rgba(28, 26, 58, 0.7), #0c0b16);
+  background: linear-gradient(180deg, rgb(24 48 54 / 0.7), #0c191d);
   transform: rotate(-1.5deg);
 }
 

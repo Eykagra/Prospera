@@ -2,8 +2,8 @@
 
 .boost-banner-card {
   background:
-    radial-gradient(90% 120% at 100% 0%, rgba(99, 102, 241, 0.22) 0%, transparent 55%),
-    linear-gradient(135deg, #12162e 0%, #1a2048 52%, #151a38 100%);
+    radial-gradient(90% 120% at 100% 0%, rgb(99 204 213 / 0.14) 0%, transparent 55%),
+    linear-gradient(135deg, #102b30 0%, #193e44 52%, #132e33 100%);
   color: #f4f5f8;
   position: relative;
   overflow: hidden;
@@ -87,7 +87,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(129, 140, 248, 0.28) 0%, transparent 68%);
+  background: radial-gradient(circle, rgb(99 204 213 / 0.18) 0%, transparent 68%);
   filter: blur(2px);
 }
 
@@ -124,8 +124,8 @@
   width: 42%;
   height: 14px;
   border-radius: 6px;
-  background: rgba(129, 140, 248, 0.35);
-  border: 1px solid rgba(165, 180, 252, 0.25);
+  background: rgb(99 204 213 / 0.25);
+  border: 1px solid rgb(99 204 213 / 0.3);
 }
 
 /* ── With-resume boost layout ──────────────────────────────────────────────── */
@@ -245,7 +245,7 @@
 
 .boost-gauge-fill {
   fill: none;
-  stroke: #818cf8;
+  stroke: #63ccd5;
   stroke-width: 7;
   stroke-linecap: round;
   transition: stroke-dashoffset 1s ease-in-out;

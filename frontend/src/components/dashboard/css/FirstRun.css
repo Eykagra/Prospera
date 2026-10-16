@@ -11,8 +11,8 @@
   border-radius: 24px;
   overflow: hidden;
   background:
-    radial-gradient(120% 140% at 100% 0%, rgba(99, 102, 241, 0.10), transparent 55%),
-    radial-gradient(120% 140% at 0% 100%, rgba(79, 70, 229, 0.07), transparent 50%),
+    radial-gradient(120% 140% at 100% 0%, rgb(var(--accent-rgb) / 0.06), transparent 55%),
+    radial-gradient(120% 140% at 0% 100%, rgb(var(--accent-rgb) / 0.04), transparent 50%),
     var(--bg-card, #ffffff);
   border: 1px solid var(--border-color, #eef0f4);
   box-shadow: 0 24px 60px -34px rgba(36, 40, 90, 0.32);
@@ -21,7 +21,7 @@
   position: absolute;
   width: 420px; height: 420px;
   right: -110px; top: -150px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.16), transparent 70%);
+  background: radial-gradient(circle, rgb(var(--accent-rgb) / 0.08), transparent 70%);
   pointer-events: none;
 }
 
@@ -29,8 +29,8 @@
 .fr-eyebrow {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-  color: var(--primary-accent, #4f46e5);
-  background: rgba(79, 70, 229, 0.09);
+  color: var(--primary);
+  background: var(--primary-light);
   padding: 6px 12px; border-radius: 999px; margin-bottom: 18px;
 }
 .fr-title {
@@ -52,8 +52,8 @@
   border: 1px solid transparent; transition: transform 0.12s, opacity 0.15s, background 0.15s;
 }
 .fr-btn-primary {
-  background: linear-gradient(135deg, #4f46e5, #6366f1); color: var(--text-inverse);
-  box-shadow: 0 14px 28px -12px rgba(79, 70, 229, 0.7);
+  background: var(--primary-accent); color: var(--text-inverse);
+  box-shadow: 0 14px 28px -12px rgb(var(--accent-rgb) / 0.3);
 }
 .fr-btn-primary:hover { transform: translateY(-1px); opacity: 0.96; }
 .fr-btn-ghost { background: var(--bg-card, #fff); color: var(--text-main, #0f172a); border-color: var(--border-dark, #e2e8f0); }
@@ -72,7 +72,7 @@
 .fr-step-ic {
   width: 42px; height: 42px; flex-shrink: 0; border-radius: 12px;
   display: grid; place-items: center;
-  background: rgba(79, 70, 229, 0.10); color: var(--primary-accent, #4f46e5);
+  background: var(--primary-light); color: var(--primary);
 }
 .fr-step-num { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light, #94a3b8); }
 .fr-step-title { font-size: 14.5px; font-weight: 700; color: var(--text-main, #0f172a); margin: 3px 0 4px; }
@@ -99,7 +99,7 @@
 .fr-ring { position: relative; width: 110px; height: 110px; flex-shrink: 0; }
 .fr-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .fr-ring-bg { fill: none; stroke: var(--bg-inset); stroke-width: 10; }
-.fr-ring-fg { fill: none; stroke: #4f46e5; stroke-width: 10; stroke-linecap: round; }
+.fr-ring-fg { fill: none; stroke: var(--primary-accent); stroke-width: 10; stroke-linecap: round; }
 .fr-ring-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .fr-ring-text strong { font-family: var(--font-heading, 'Outfit'); font-size: 28px; font-weight: 800; color: var(--text-main); line-height: 1; }
 .fr-ring-text span { font-size: 11px; color: var(--text-light); margin-top: 2px; }
@@ -108,18 +108,18 @@
 .fr-chip.add { background: var(--success-bg); color: var(--success-strong); }
 .fr-chip.muted { background: var(--bg-inset); color: var(--text-light); }
 .fr-progress { height: 7px; border-radius: 999px; background: var(--bg-inset); margin: 18px 0 10px; overflow: hidden; }
-.fr-progress span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #6366f1, #4f46e5); }
+.fr-progress span { display: block; height: 100%; border-radius: 999px; background: var(--primary-accent); }
 .fr-mock-foot { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--success-strong); margin: 0; }
 
 /* ats */
 .fr-mock-ats { display: flex; gap: 16px; }
 .fr-ats-doc { position: relative; flex: 1; display: flex; flex-direction: column; gap: 9px; padding: 14px; background: var(--bg-main); border-radius: 12px; overflow: hidden; }
-.fr-ats-beam { position: absolute; left: 0; right: 0; top: 0; height: 34px; background: linear-gradient(180deg, rgba(79, 70, 229, 0.18), transparent); border-top: 2px solid #6366f1; animation: frScan 2.8s ease-in-out infinite; }
+.fr-ats-beam { position: absolute; left: 0; right: 0; top: 0; height: 34px; background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.12), transparent); border-top: 2px solid var(--primary-accent); animation: frScan 2.8s ease-in-out infinite; }
 @keyframes frScan { 0% { top: -12%; } 50% { top: 86%; } 100% { top: -12%; } }
 .fr-ats-side { width: 116px; display: flex; flex-direction: column; gap: 8px; }
 .fr-ats-score { display: flex; flex-direction: column; align-items: center; padding: 12px; border-radius: 12px; background: var(--bg-inset); }
-.fr-ats-score strong { font-family: var(--font-heading, 'Outfit'); font-size: 24px; font-weight: 800; color: #4f46e5; line-height: 1; }
-.fr-ats-score span { font-size: 10.5px; color: #818cf8; margin-top: 2px; }
+.fr-ats-score strong { font-family: var(--font-heading, 'Outfit'); font-size: 24px; font-weight: 800; color: var(--primary); line-height: 1; }
+.fr-ats-score span { font-size: 10.5px; color: var(--text-muted); margin-top: 2px; }
 .fr-pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 5px 9px; border-radius: 8px; }
 .fr-pill.ok { background: var(--success-bg); color: var(--success-strong); }
 .fr-pill.warn { background: var(--warning-bg); color: var(--warning); }
@@ -143,7 +143,7 @@
 .fr-rcard.d2 { top: 4px; left: 0; transform: rotate(-7deg) scale(0.94); opacity: 0.85; }
 .fr-rcard.d1 { top: 22px; left: 44px; transform: rotate(4deg) scale(0.97); opacity: 0.92; }
 .fr-rcard.d0 { top: 44px; left: 80px; z-index: 2; }
-.fr-rcard-top { display: flex; align-items: center; gap: 8px; color: #4f46e5; margin-bottom: 2px; }
+.fr-rcard-top { display: flex; align-items: center; gap: 8px; color: var(--primary); margin-bottom: 2px; }
 .fr-rcard-badge { position: absolute; top: 14px; right: 14px; font-family: var(--font-heading, 'Outfit'); font-weight: 800; font-size: 14px; color: var(--success-strong); background: var(--success-bg); padding: 2px 8px; border-radius: 8px; }
 
 @media (max-width: 920px) {

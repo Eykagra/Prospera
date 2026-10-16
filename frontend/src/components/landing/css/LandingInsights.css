@@ -1,16 +1,16 @@
 .momentum-section {
-  --momentum-bg: #0c0d10;
-  --momentum-panel: #13151a;
-  --momentum-line: rgba(255, 255, 255, 0.12);
-  --momentum-text: #f6f7fb;
-  --momentum-muted: #9a9faa;
-  --momentum-accent: #8b8cfb;
+  --momentum-bg: var(--bg-main);
+  --momentum-panel: var(--bg-card);
+  --momentum-line: var(--border-dark);
+  --momentum-text: var(--text-main);
+  --momentum-muted: var(--text-muted);
+  --momentum-accent: var(--primary);
   position: relative;
   overflow: hidden;
   padding: 150px 24px;
   color: var(--momentum-text);
   background:
-    radial-gradient(circle at 10% 0%, rgba(79, 70, 229, 0.18), transparent 31%),
+    radial-gradient(circle at 10% 0%, rgb(var(--accent-rgb) / 0.06), transparent 31%),
     var(--momentum-bg);
 }
 
@@ -21,11 +21,11 @@
   bottom: -31vw;
   width: 62vw;
   aspect-ratio: 1;
-  border: 1px solid rgba(139, 140, 251, 0.14);
+  border: 1px solid var(--accent-border);
   border-radius: 50%;
   box-shadow:
-    0 0 0 8vw rgba(139, 140, 251, 0.025),
-    0 0 0 16vw rgba(139, 140, 251, 0.018);
+    0 0 0 8vw rgb(var(--accent-rgb) / 0.025),
+    0 0 0 16vw rgb(var(--accent-rgb) / 0.018);
   pointer-events: none;
 }
 
@@ -97,7 +97,7 @@
   position: absolute;
   inset: 0;
   background: var(--momentum-accent);
-  box-shadow: 0 0 16px rgba(139, 140, 251, 0.6);
+  box-shadow: 0 0 16px rgb(var(--accent-rgb) / 0.18);
   transform-origin: top;
 }
 
@@ -123,7 +123,7 @@
   height: 42px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(139, 140, 251, 0.32);
+  border: 1px solid var(--accent-border);
   border-radius: 50%;
   color: var(--momentum-accent);
   background: var(--momentum-panel);
@@ -162,11 +162,11 @@
   padding: 7px 10px;
   border: 1px solid var(--momentum-line);
   border-radius: 999px;
-  color: #c8cbd4;
+  color: var(--momentum-muted);
   font-size: 10px;
   font-weight: 650;
   white-space: nowrap;
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--momentum-panel);
 }
 
 .momentum-aside {
@@ -201,7 +201,7 @@
   margin-top: 38px;
   padding: 13px 0;
   border: 0;
-  border-bottom: 1px solid rgba(139, 140, 251, 0.55);
+  border-bottom: 1px solid var(--momentum-accent);
   color: var(--momentum-text);
   background: transparent;
   font: 650 14px var(--font-sans);

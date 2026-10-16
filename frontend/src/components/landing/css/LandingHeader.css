@@ -39,7 +39,7 @@
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 20px;
-  box-shadow: 0 4px 12px rgba(54, 63, 245, 0.2);
+  box-shadow: 0 4px 12px rgb(var(--accent-rgb) / 0.12);
 }
 
 .logo-text-bold {
@@ -113,14 +113,14 @@
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(54, 63, 245, 0.15);
+  box-shadow: 0 4px 14px rgb(var(--accent-rgb) / 0.12);
   transition: var(--transition-smooth);
 }
 
 .btn-primary-nav:hover {
-  background-color: var(--primary);
+  background-color: var(--primary-accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(54, 63, 245, 0.25);
+  box-shadow: 0 6px 18px rgb(var(--accent-rgb) / 0.16);
 }
 
 .nav-cta-label-short { display: none; }

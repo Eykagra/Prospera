@@ -12,7 +12,7 @@
   width: var(--brand-mark-size, 38px);
   height: var(--brand-mark-size, 38px);
   flex: 0 0 auto;
-  filter: drop-shadow(0 4px 7px rgba(79, 70, 229, 0.2));
+  filter: drop-shadow(0 4px 7px rgb(var(--accent-rgb) / 0.12));
 }
 
 .brand-logo-word {

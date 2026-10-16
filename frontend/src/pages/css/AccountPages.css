@@ -1,7 +1,7 @@
 /* ── Account screens (Profile + Settings) ─────────────────────────────────────
    Focused single-column layout (à la Linear / Vercel / GitHub settings):
    a calm column of cards, each with an icon-chip header and an inset footer
-   action bar. On-brand indigo only — no off-brand accents. Token-driven so it
+   action bar. Shared teal accents and cool neutrals. Token-driven so it
    themes automatically in light + dark. */
 
 .acc-page {
@@ -56,9 +56,8 @@
 .acc-hero-cover {
   height: 100px;
   background:
-    radial-gradient(120% 160% at 100% 0%, rgba(165, 180, 252, 0.45), transparent 58%),
-    radial-gradient(90% 120% at 0% 0%, rgba(255, 255, 255, 0.18), transparent 60%),
-    linear-gradient(118deg, #4b54ff 0%, #4338ca 52%, #3730a3 100%);
+    radial-gradient(120% 160% at 100% 0%, rgb(var(--accent-rgb) / 0.22), transparent 58%),
+    linear-gradient(118deg, var(--accent-art), var(--primary-light));
 }
 .acc-hero-body { display: flex; align-items: flex-end; gap: 18px; padding: 0 28px 22px; }
 .acc-hero-avatar {
@@ -68,8 +67,8 @@
 }
 .acc-hero-avatar-mono {
   display: grid; place-items: center;
-  background: linear-gradient(140deg, #6366f1, #4f46e5);
-  color: #fff; font-family: var(--font-heading); font-size: 36px; font-weight: 700;
+  background: var(--primary-accent);
+  color: var(--text-inverse); font-family: var(--font-heading); font-size: 36px; font-weight: 700;
 }
 .acc-hero-info { min-width: 0; flex: 1; padding-bottom: 3px; }
 .acc-hero-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--text-main); letter-spacing: -0.4px; line-height: 1.2; }
@@ -119,7 +118,7 @@
 
 /* ── Buttons ──────────────────────────────────────────────────────────────────*/
 .acc-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 9px 17px; border: 1px solid transparent; border-radius: 9px; font-size: 13.5px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap; transition: background 0.15s, opacity 0.15s, filter 0.15s, transform 0.1s, border-color 0.15s; }
-.acc-btn-primary { background: var(--primary-accent); color: var(--text-inverse); box-shadow: 0 8px 18px -9px rgba(79, 70, 229, 0.65); }
+.acc-btn-primary { background: var(--primary-accent); color: var(--text-inverse); box-shadow: 0 8px 18px -9px rgb(var(--accent-rgb) / 0.25); }
 .acc-btn-primary:hover:not(:disabled) { background: var(--primary-accent-hover); transform: translateY(-1px); }
 .acc-btn:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; transform: none; }
 .acc-btn-ghost { background: var(--bg-card); color: var(--text-main); border-color: var(--border-dark); }
@@ -177,12 +176,13 @@
 .acc-theme-preview .tp-line { height: 7px; border-radius: 4px; }
 .acc-theme-preview .tp-line.w1 { width: 82%; }
 .acc-theme-preview .tp-line.w2 { width: 60%; }
-.tp-light { background: #eef1f8; }
-.tp-light .tp-bar { background: #4f46e5; }
-.tp-light .tp-line { background: #d3d8e4; }
-.tp-dark { background: #121317; }
-.tp-dark .tp-bar { background: #818cf8; }
-.tp-dark .tp-line { background: #2c303b; }
+/* Intentionally fixed: these swatches preview both palettes in either theme. */
+.tp-light { background: #f5f7f8; }
+.tp-light .tp-bar { background: #087f8c; }
+.tp-light .tp-line { background: #cedbde; }
+.tp-dark { background: #101719; }
+.tp-dark .tp-bar { background: #63ccd5; }
+.tp-dark .tp-line { background: #354b51; }
 .acc-theme-foot { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 12px; border-top: 1px solid var(--border-color); font-size: 13px; font-weight: 600; color: var(--text-muted); }
 .acc-theme-opt.active .acc-theme-foot { color: var(--primary-accent); }
 .acc-theme-check { margin-left: 2px; display: inline-flex; }

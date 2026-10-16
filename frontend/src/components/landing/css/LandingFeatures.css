@@ -98,19 +98,19 @@
 
 .product-stage,
 .mobile-product-stage {
-  --scene-bg: #f3f5fa;
-  --scene-panel: #ffffff;
-  --scene-panel-soft: #f8f9fc;
-  --scene-line: #dde1ea;
-  --scene-text: #181b24;
-  --scene-muted: #697184;
-  --scene-soft: #eef0f7;
+  --scene-bg: var(--bg-main);
+  --scene-panel: var(--bg-card);
+  --scene-panel-soft: var(--bg-inset);
+  --scene-line: var(--border-dark);
+  --scene-text: var(--text-main);
+  --scene-muted: var(--text-muted);
+  --scene-soft: var(--border-color);
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border-dark);
   border-radius: 18px;
   background: var(--scene-bg);
-  box-shadow: 0 32px 80px -46px rgba(38, 34, 102, 0.52);
+  box-shadow: var(--shadow-lg);
 }
 
 .product-stage {
@@ -118,18 +118,6 @@
   height: min(66vh, 620px);
   height: min(66dvh, 620px);
   min-height: 480px;
-}
-
-:root[data-theme="dark"] .product-stage,
-:root[data-theme="dark"] .mobile-product-stage {
-  --scene-bg: #101114;
-  --scene-panel: #181a1f;
-  --scene-panel-soft: #1c1e24;
-  --scene-line: #30333b;
-  --scene-text: #f1f2f5;
-  --scene-muted: #969ca8;
-  --scene-soft: #23262d;
-  box-shadow: 0 32px 80px -46px rgba(0, 0, 0, 0.95);
 }
 
 .product-scene {
@@ -163,7 +151,7 @@
 }
 
 .scene-state {
-  color: var(--primary-accent);
+  color: var(--primary);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 700;
@@ -256,7 +244,7 @@
   top: 18%;
   height: 2px;
   background: var(--primary-accent);
-  box-shadow: 0 0 18px rgba(79, 70, 229, 0.48), 0 14px 30px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 0 18px rgb(var(--accent-rgb) / 0.24), 0 14px 30px rgb(var(--accent-rgb) / 0.1);
   animation: resumeScan 3.4s cubic-bezier(0.55, 0, 0.45, 1) infinite alternate;
 }
 
